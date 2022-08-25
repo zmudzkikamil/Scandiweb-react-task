@@ -1,5 +1,5 @@
 # <p align="center">Scandiweb Junior Developer test assignment</p1>
-
+# <p align="center">Kamil Żmudzki</p2>
 <p align="center"><em>Shop website - React.js, graphQL, Redux</em><br>
 
 
