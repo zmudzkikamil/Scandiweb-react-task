@@ -39,12 +39,12 @@ export class ListingPage extends Component {
   };
   render() {
     return (
-      <main>
+      <>
         <h1 className={styles.title}>{this.props.state.category}</h1>
         <div className={styles.listing}>
           <Query query={fetchProducts(this.props.state.category)}>{this.queryHandler}</Query>
         </div>
-      </main>
+      </>
     );
   }
 }

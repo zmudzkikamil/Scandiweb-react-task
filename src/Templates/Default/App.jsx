@@ -17,7 +17,7 @@ export default class App extends Component {
       <Provider store={store}>
         <Router>
           <Navigation state={this.state} changeCategoryHandler={this.changeCategoryHandler} />
-          <div className={styles.wrapper}>
+          <main className={styles.wrapper}>
             <Switch>
               <Route exact path="/">
                 <ListingPage state={this.state} />
@@ -25,7 +25,7 @@ export default class App extends Component {
               <Route path="/description-page" component={DescriptionPage} />
               <Route path="/cart-page" component={CartPage} />
             </Switch>
-          </div>
+          </main>
         </Router>
       </Provider>
     );
