@@ -1,0 +1,26 @@
+.overlay-container {
+  position: relative;
+  max-width: 1238px;
+  width: 95%;
+  margin: auto;
+}
+.overlay {
+  position: fixed;
+  top: 80px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+.cart-overlay {
+  background-color: rgba(57, 55, 72, 0.22);
+}
+.cart-popover {
+  position: absolute;
+  top: 0px;
+  right: -10px;
+  width: 325px;
+  max-height: 690px;
+  padding: 32px 16px;
+  background-color: white;
+}

@@ -1,0 +1,34 @@
+@import "../../scss/variables";
+.atr-box {
+  display: flex;
+  flex-direction: column;
+}
+.atr-title {
+  font-family: $font-raleway;
+  font-weight: 400;
+  text-transform: capitalize;
+  font-size: 14px;
+  line-height: 16px;
+  color: #292929;
+  margin-bottom: 8px;
+}
+.value-box {
+  display: flex;
+  gap: 8px;
+}
+.value {
+  min-width: 24px;
+  padding: 0px 3px;
+  border: 1px #1d1f22 solid;
+  font-family: $font-source-sans-pro;
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: 0.05em;
+  background-color: white;
+  margin-bottom: 8px;
+  text-align: center;
+}
+.selected {
+  background-color: black;
+  color: white;
+}

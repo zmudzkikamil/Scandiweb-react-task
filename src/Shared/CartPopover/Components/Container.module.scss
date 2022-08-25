@@ -1,0 +1,33 @@
+.container {
+  display: flex;
+  flex-direction: column;
+}
+.products {
+  width: 293px;
+}
+.product {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+  gap: 8px;
+}
+.product:last-child {
+  margin-bottom: 0px;
+}
+.scroll {
+  width: 306px;
+  max-height: 500px;
+  overflow-y: auto;
+}
+.scroll::-webkit-scrollbar {
+  border-radius: 50%;
+  width: 10px;
+}
+.scroll::-webkit-scrollbar-track {
+  background-color: #ffffff;
+}
+.scroll::-webkit-scrollbar-thumb {
+  background-color: #00000050;
+  border-radius: 5px;
+}

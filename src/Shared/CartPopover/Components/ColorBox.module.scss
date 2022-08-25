@@ -1,0 +1,41 @@
+@import "../../scss/variables.scss";
+
+.atr-box {
+  display: flex;
+  flex-direction: column;
+  padding-left: 1px;
+}
+.atr-title {
+  font-weight: 400;
+  text-transform: capitalize;
+  font-size: 14px;
+  color: #292929;
+  margin-bottom: 8px;
+}
+.value-box-color {
+  display: flex;
+  gap: 6px;
+}
+.value {
+  padding: 5px;
+  border: 1px #1d1f22 solid;
+  font-family: $font-source-sans-pro;
+  font-size: 16px;
+  line-height: 18px;
+  letter-spacing: 0.05em;
+  background-color: white;
+}
+.color-white {
+  width: 16px;
+  height: 16px;
+  border: 1px solid rgb(240, 200, 225);
+}
+.color {
+  width: 16px;
+  height: 16px;
+  border: none;
+}
+.selected-color {
+  border: 1px solid rgb(255, 255, 255);
+  outline: 1px solid $primary-color;
+}
