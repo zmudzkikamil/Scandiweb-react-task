@@ -1,4 +1,4 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice } from '@reduxjs/toolkit';
 
 // product={
 //     quantity:number,
@@ -8,10 +8,10 @@ import { createSlice } from "@reduxjs/toolkit";
 //     }
 // }
 const initialState = {
-  cartProducts: JSON.parse(localStorage.getItem("cart")) || [],
+  cartProducts: JSON.parse(localStorage.getItem('cart')) || []
 };
 export const cartSlice = createSlice({
-  name: "cart",
+  name: 'cart',
   initialState,
   reducers: {
     addNewProduct: (state, action) => {
@@ -39,7 +39,7 @@ export const cartSlice = createSlice({
       } else {
         state.cartProducts[existingProductIndex].quantity--;
       }
-    },
-  },
+    }
+  }
 });
 export const { addNewProduct, removeProduct } = cartSlice.actions;

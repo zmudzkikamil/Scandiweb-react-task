@@ -1,6 +1,6 @@
-import { Component } from "react";
-import { connect } from "react-redux";
-import { TotalPriceHandler } from "../helpers/TotalPriceHandler";
+import { Component } from 'react';
+import { connect } from 'react-redux';
+import { TotalPriceHandler } from '../helpers/TotalPriceHandler';
 export class TotalPrice extends Component {
   render() {
     return <>{TotalPriceHandler(this.props.cart, this.props.label)}</>;

@@ -1,13 +1,10 @@
-import { Component } from "react";
-import { connect } from "react-redux";
-import styles from "../CartPage.module.scss";
+import { Component } from 'react';
+import { connect } from 'react-redux';
+import styles from '../CartPage.module.scss';
 export class OrderBtn extends Component {
   render() {
     return (
-      <button
-        disabled={!this.props.cart.length}
-        className={styles["order-btn"]}
-      >
+      <button disabled={!this.props.cart.length} className={styles['order-btn']}>
         order
       </button>
     );

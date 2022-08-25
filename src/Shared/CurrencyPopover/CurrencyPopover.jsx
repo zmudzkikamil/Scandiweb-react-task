@@ -1,24 +1,22 @@
-import { Query } from "@apollo/client/react/components";
-import React, { Component } from "react";
-import ReactDom from "react-dom";
-import { CURRENCIES } from "../../Features/fetchCurrency";
-import Spinner from "../assets/svg/Spinner";
-import { CurrencyOption } from "./Components/CurrencyOption";
-import styles from "./CurrencyPopover.module.scss";
+import { Query } from '@apollo/client/react/components';
+import { Component } from 'react';
+import ReactDom from 'react-dom';
+import { CURRENCIES } from '../../Features/fetchCurrency';
+import Spinner from '../assets/svg/Spinner';
+import { CurrencyOption } from './Components/CurrencyOption';
+import styles from './CurrencyPopover.module.scss';
 export class CurrencyPopover extends Component {
   queryHandler = ({ loading, error, data }) => {
     if (loading)
       return (
-        <div className={styles["loading-box"]}>
+        <div className={styles['loading-box']}>
           <Spinner />
         </div>
       );
     if (error)
       return (
-        <div className={styles["error-box"]}>
-          <p className={styles.error}>
-            Oops, something went wrong. Try again later.
-          </p>
+        <div className={styles['error-box']}>
+          <p className={styles.error}>Oops, something went wrong. Try again later.</p>
         </div>
       );
     const { currencies } = data;
@@ -42,20 +40,17 @@ export class CurrencyPopover extends Component {
     return ReactDom.createPortal(
       <>
         <div
-          className={`${styles["currency-overlay"]} ${styles.overlay}`}
+          className={`${styles['currency-overlay']} ${styles.overlay}`}
           onClick={this.props.setModal}
         >
-          <div className={styles["overlay-container"]}>
-            <div
-              onClick={(e) => e.stopPropagation()}
-              className={styles["currency-popover"]}
-            >
+          <div className={styles['overlay-container']}>
+            <div onClick={(e) => e.stopPropagation()} className={styles['currency-popover']}>
               <Query query={CURRENCIES}>{this.queryHandler}</Query>
             </div>
           </div>
         </div>
       </>,
-      document.getElementById("popover")
+      document.getElementById('popover')
     );
   }
 }

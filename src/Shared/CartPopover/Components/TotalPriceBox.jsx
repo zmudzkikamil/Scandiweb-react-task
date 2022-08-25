@@ -1,7 +1,7 @@
-import { Component } from "react";
-import { connect } from "react-redux";
-import TotalPrice from "../../Components/TotalPrice";
-import styles from "./TotalPriceBox.module.scss";
+import { Component } from 'react';
+import { connect } from 'react-redux';
+import TotalPrice from '../../Components/TotalPrice';
+import styles from './TotalPriceBox.module.scss';
 export class TotalPriceBox extends Component {
   render() {
     return (

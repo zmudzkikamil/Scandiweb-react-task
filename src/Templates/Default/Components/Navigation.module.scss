@@ -1,4 +1,4 @@
-@import "../../../Shared/scss/variables.scss";
+@import '../../../Shared/scss/variables.scss';
 
 .nav {
   position: sticky;
@@ -29,14 +29,14 @@
     position: relative;
     padding: 16px;
     font-weight: 400;
-    font-family: "Raleway";
+    font-family: 'Raleway';
     text-transform: uppercase;
     list-style: none;
     cursor: pointer;
     transition: color 0.3s;
     &::after {
       position: absolute;
-      content: "";
+      content: '';
       height: 2px;
       bottom: -18px;
       margin: 0 auto;
@@ -106,7 +106,7 @@
   padding: 0px 6px;
   background-color: black;
   color: white;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-weight: 700;
   font-size: 14px;
   text-align: center;

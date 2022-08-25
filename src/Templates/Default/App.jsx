@@ -1,14 +1,14 @@
-import React, { Component } from "react";
-import { Provider } from "react-redux";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import CartPage from "../../Views/CartPage/CartPage";
-import DescriptionPage from "../../Views/DescriptionPage/DescriptionPage";
-import ListingPage from "../../Views/ListingPage/ListingPage";
-import styles from "../Default/App.module.scss";
-import Navigation from "./Components/Navigation";
-import store from "../../ContextManager/store";
+import React, { Component } from 'react';
+import { Provider } from 'react-redux';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import CartPage from '../../Views/CartPage/CartPage';
+import DescriptionPage from '../../Views/DescriptionPage/DescriptionPage';
+import ListingPage from '../../Views/ListingPage/ListingPage';
+import styles from '../Default/App.module.scss';
+import Navigation from './Components/Navigation';
+import store from '../../ContextManager/store';
 export default class App extends Component {
-  state = { category: "all" };
+  state = { category: 'all' };
   changeCategoryHandler = (category) => {
     this.setState((prev) => ({ ...prev, category }));
   };
@@ -16,10 +16,7 @@ export default class App extends Component {
     return (
       <Provider store={store}>
         <Router>
-          <Navigation
-            state={this.state}
-            changeCategoryHandler={this.changeCategoryHandler}
-          />
+          <Navigation state={this.state} changeCategoryHandler={this.changeCategoryHandler} />
           <div className={styles.wrapper}>
             <Switch>
               <Route exact path="/">

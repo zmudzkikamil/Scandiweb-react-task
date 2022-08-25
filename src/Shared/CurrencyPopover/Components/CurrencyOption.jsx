@@ -1,5 +1,5 @@
-import { Component } from "react";
-import styles from "../CurrencyPopover.module.scss";
+import { Component } from 'react';
+import styles from '../CurrencyPopover.module.scss';
 
 export class CurrencyOption extends Component {
   clickHandler = () => {
@@ -10,9 +10,8 @@ export class CurrencyOption extends Component {
     return (
       <button
         onClick={this.clickHandler}
-        className={`${styles["currency-option"]} ${
-          this.props.isSelected === this.props.label &&
-          styles["selected-currency"]
+        className={`${styles['currency-option']} ${
+          this.props.isSelected === this.props.label && styles['selected-currency']
         }`}
       >
         {this.props.symbol} {this.props.label} {this.props.currency}

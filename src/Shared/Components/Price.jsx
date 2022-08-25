@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import { connect } from "react-redux";
+import { Component } from 'react';
+import { connect } from 'react-redux';
 export class Price extends Component {
   render() {
     return (
@@ -9,7 +9,7 @@ export class Price extends Component {
             curr.currency.label === this.props.label
               ? `${curr.currency.symbol} ${curr.amount.toFixed(2)}`
               : acc,
-          ""
+          ''
         )}
       </>
     );

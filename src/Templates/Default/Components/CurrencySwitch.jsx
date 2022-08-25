@@ -1,17 +1,17 @@
-import { connect } from "react-redux";
-import { Component } from "react";
-import { changeCurrency } from "../../../ContextManager/CurrencySlice";
-import ArrowDown from "../../../Shared/assets/svg/ArrowDown";
-import ArrowUp from "../../../Shared/assets/svg/ArrowUp";
-import CurrencyPopover from "../../../Shared/CurrencyPopover/CurrencyPopover";
-import styles from "./Navigation.module.scss";
+import { connect } from 'react-redux';
+import { Component } from 'react';
+import { changeCurrency } from '../../../ContextManager/CurrencySlice';
+import ArrowDown from '../../../Shared/assets/svg/ArrowDown';
+import ArrowUp from '../../../Shared/assets/svg/ArrowUp';
+import CurrencyPopover from '../../../Shared/CurrencyPopover/CurrencyPopover';
+import styles from './Navigation.module.scss';
 
 export class CurrencySwitch extends Component {
   constructor(props) {
     super(props);
     this.state = {
       isOpen: false,
-      isSelected: JSON.parse(localStorage.getItem("currency"))?.label || "USD",
+      isSelected: JSON.parse(localStorage.getItem('currency'))?.label || 'USD'
     };
   }
   setModal = () => {
@@ -24,7 +24,7 @@ export class CurrencySwitch extends Component {
   render() {
     return (
       <div>
-        <button onClick={this.setModal} className={styles["nav__btn"]}>
+        <button onClick={this.setModal} className={styles['nav__btn']}>
           <p>{this.props.symbol}</p>
           <div>{this.state.isOpen ? <ArrowUp /> : <ArrowDown />}</div>
         </button>

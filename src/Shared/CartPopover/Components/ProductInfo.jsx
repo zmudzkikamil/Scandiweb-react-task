@@ -1,8 +1,8 @@
-import { Component } from "react";
-import Price from "../../Components/Price";
-import AttributeBox from "./AttributeBox";
-import ColorBox from "./ColorBox";
-import styles from "./ProductInfo.module.scss";
+import { Component } from 'react';
+import Price from '../../Components/Price';
+import AttributeBox from './AttributeBox';
+import ColorBox from './ColorBox';
+import styles from './ProductInfo.module.scss';
 export class ProductInfo extends Component {
   render() {
     return (
@@ -13,23 +13,19 @@ export class ProductInfo extends Component {
           <Price prices={this.props.product.prices} />
         </p>
         {this.props.product.allAttributes
-          .filter((atr) => atr.id !== "Color")
+          .filter((atr) => atr.id !== 'Color')
           .map((atr) => (
             <AttributeBox
-              selectedAttributeId={
-                this.props.product.selectedAttributes[atr.id]
-              }
+              selectedAttributeId={this.props.product.selectedAttributes[atr.id]}
               key={atr.id}
               atr={atr}
             />
           ))}
         {this.props.product.allAttributes
-          .filter((atr) => atr.id === "Color")
+          .filter((atr) => atr.id === 'Color')
           .map((atr) => (
             <ColorBox
-              selectedAttributeId={
-                this.props.product.selectedAttributes[atr.id]
-              }
+              selectedAttributeId={this.props.product.selectedAttributes[atr.id]}
               key={atr.id}
               atr={atr}
             />

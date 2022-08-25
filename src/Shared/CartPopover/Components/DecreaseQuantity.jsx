@@ -1,7 +1,7 @@
-import React, { Component } from "react";
-import { connect } from "react-redux";
-import styles from "./QuantityChanger.module.scss";
-import { removeProduct } from "../../../ContextManager/CartSlice";
+import { Component } from 'react';
+import { connect } from 'react-redux';
+import styles from './QuantityChanger.module.scss';
+import { removeProduct } from '../../../ContextManager/CartSlice';
 export class DecreaseQuantity extends Component {
   removeProductHandler = () => {
     this.props.dispatch(removeProduct(this.props.product));

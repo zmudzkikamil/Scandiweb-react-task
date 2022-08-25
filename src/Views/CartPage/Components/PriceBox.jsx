@@ -1,6 +1,6 @@
-import { Component } from "react";
-import { connect } from "react-redux";
-import TotalPrice from "../../../Shared/Components/TotalPrice";
+import { Component } from 'react';
+import { connect } from 'react-redux';
+import TotalPrice from '../../../Shared/Components/TotalPrice';
 export class PriceBox extends Component {
   render() {
     return (

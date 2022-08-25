@@ -1,7 +1,7 @@
-import React, { Component } from "react";
-import ReactDom from "react-dom";
-import styles from "./CartPopover.module.scss";
-import Container from "./Components/Container";
+import { Component } from 'react';
+import ReactDom from 'react-dom';
+import styles from './CartPopover.module.scss';
+import Container from './Components/Container';
 
 export class CartPopover extends Component {
   render() {
@@ -9,14 +9,11 @@ export class CartPopover extends Component {
     return ReactDom.createPortal(
       <>
         <div
-          className={`${styles["cart-overlay"]} ${styles.overlay}`}
+          className={`${styles['cart-overlay']} ${styles.overlay}`}
           onClick={this.props.setPopover}
         >
-          <div className={styles["overlay-container"]}>
-            <div
-              onClick={(e) => e.stopPropagation()}
-              className={styles["cart-popover"]}
-            >
+          <div className={styles['overlay-container']}>
+            <div onClick={(e) => e.stopPropagation()} className={styles['cart-popover']}>
               <Container
                 setPopover={this.props.setPopover}
                 totalQuantity={this.props.totalQuantity}
@@ -25,7 +22,7 @@ export class CartPopover extends Component {
           </div>
         </div>
       </>,
-      document.getElementById("popover")
+      document.getElementById('popover')
     );
   }
 }

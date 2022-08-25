@@ -1,8 +1,8 @@
-import React, { Component } from "react";
-import ListingCart from "../../../Shared/assets/svg/ListingCart";
-import styles from "../ListingPage.module.scss";
-import { connect } from "react-redux";
-import { addNewProduct } from "../../../ContextManager/CartSlice";
+import { Component } from 'react';
+import ListingCart from '../../../Shared/assets/svg/ListingCart';
+import styles from '../ListingPage.module.scss';
+import { connect } from 'react-redux';
+import { addNewProduct } from '../../../ContextManager/CartSlice';
 export class CartButton extends Component {
   clickHandler = () => {
     this.props.dispatch(
@@ -14,7 +14,7 @@ export class CartButton extends Component {
         prices: this.props.prices,
         quantity: 1,
         allAttributes: this.props.attributes,
-        selectedAttributes: {},
+        selectedAttributes: {}
       })
     );
   };
@@ -23,7 +23,7 @@ export class CartButton extends Component {
       <button
         onClick={this.clickHandler}
         disabled={!this.props.inStock}
-        className={styles["listing__item-cart"]}
+        className={styles['listing__item-cart']}
       >
         <ListingCart />
       </button>

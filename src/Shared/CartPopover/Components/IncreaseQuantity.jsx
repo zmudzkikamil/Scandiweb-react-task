@@ -1,7 +1,7 @@
-import React, { Component } from "react";
-import styles from "./QuantityChanger.module.scss";
-import { addNewProduct } from "../../../ContextManager/CartSlice";
-import { connect } from "react-redux";
+import { Component } from 'react';
+import styles from './QuantityChanger.module.scss';
+import { addNewProduct } from '../../../ContextManager/CartSlice';
+import { connect } from 'react-redux';
 export class IncreaseQuantity extends Component {
   addNewProductHandler = () => {
     this.props.dispatch(addNewProduct(this.props.product));
@@ -9,8 +9,8 @@ export class IncreaseQuantity extends Component {
   render() {
     return (
       <button onClick={this.addNewProductHandler} className={styles.btn}>
-        <div className={styles["increase-vertical"]}></div>
-        <div className={styles["increase-horizontal"]}></div>
+        <div className={styles['increase-vertical']}></div>
+        <div className={styles['increase-horizontal']}></div>
       </button>
     );
   }

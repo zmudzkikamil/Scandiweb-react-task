@@ -1,5 +1,5 @@
-import { Component } from "react";
-import styles from "./CartTitle.module.scss";
+import { Component } from 'react';
+import styles from './CartTitle.module.scss';
 
 export class CartTitle extends Component {
   render() {
@@ -7,10 +7,9 @@ export class CartTitle extends Component {
       <>
         {this.props.totalQuantity ? (
           <h2 className={styles.title}>
-            My Bag,{" "}
+            My Bag,{' '}
             <span className={styles.quantity}>
-              {this.props.totalQuantity}{" "}
-              {this.props.totalQuantity > 1 ? "items" : "item"}
+              {this.props.totalQuantity} {this.props.totalQuantity > 1 ? 'items' : 'item'}
             </span>
           </h2>
         ) : (

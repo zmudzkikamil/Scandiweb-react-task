@@ -1,7 +1,7 @@
-import { Component } from "react";
-import DecreaseQuantity from "./DecreaseQuantity";
-import IncreaseQuantity from "./IncreaseQuantity";
-import styles from "./QuantityChanger.module.scss";
+import { Component } from 'react';
+import DecreaseQuantity from './DecreaseQuantity';
+import IncreaseQuantity from './IncreaseQuantity';
+import styles from './QuantityChanger.module.scss';
 export class QuantityChanger extends Component {
   render() {
     return (

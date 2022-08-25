@@ -3,9 +3,7 @@ export const TotalPriceHandler = (cart, label) => {
     .map((product) =>
       product.prices.reduce(
         (acc, curr) =>
-          curr.currency.label === label
-            ? curr.amount.toFixed(2) * product.quantity
-            : acc,
+          curr.currency.label === label ? curr.amount.toFixed(2) * product.quantity : acc,
         0
       )
     )

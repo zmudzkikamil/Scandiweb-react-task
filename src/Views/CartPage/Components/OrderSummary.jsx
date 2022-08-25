@@ -1,8 +1,8 @@
-import { Component } from "react";
-import { connect } from "react-redux";
-import PriceBox from "./PriceBox";
-import Tax from "./Tax";
-import TotalQuantity from "./TotalQuantity";
+import { Component } from 'react';
+import { connect } from 'react-redux';
+import PriceBox from './PriceBox';
+import Tax from './Tax';
+import TotalQuantity from './TotalQuantity';
 
 export class OrderSummary extends Component {
   render() {
@@ -37,7 +37,7 @@ const mapStateToProps = (state) => {
   return {
     cart: state.cart.cartProducts,
     label: state.currency.label,
-    symbol: state.currency.symbol,
+    symbol: state.currency.symbol
   };
 };
 

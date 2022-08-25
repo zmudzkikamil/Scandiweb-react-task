@@ -1,4 +1,4 @@
-import { PureComponent } from "react";
+import { PureComponent } from 'react';
 
 export default class ArrowRight extends PureComponent {
   render() {

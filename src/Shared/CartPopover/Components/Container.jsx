@@ -1,12 +1,12 @@
-import { Component } from "react";
-import styles from "./Container.module.scss";
-import { connect } from "react-redux";
-import ProductInfo from "./ProductInfo";
-import ProductGallery from "./ProductGallery";
-import QuantityChanger from "./QuantityChanger";
-import CartTitle from "./CartTitle";
-import ButtonsContainer from "./ButtonsContainer";
-import TotalPriceBox from "./TotalPriceBox";
+import { Component } from 'react';
+import styles from './Container.module.scss';
+import { connect } from 'react-redux';
+import ProductInfo from './ProductInfo';
+import ProductGallery from './ProductGallery';
+import QuantityChanger from './QuantityChanger';
+import CartTitle from './CartTitle';
+import ButtonsContainer from './ButtonsContainer';
+import TotalPriceBox from './TotalPriceBox';
 
 export class Container extends Component {
   render() {
@@ -18,10 +18,7 @@ export class Container extends Component {
             {this.props.cart.map((product, index) => (
               <div className={styles.product} key={index}>
                 <ProductInfo product={product} />
-                <QuantityChanger
-                  product={product}
-                  quantity={product.quantity}
-                />
+                <QuantityChanger product={product} quantity={product.quantity} />
                 <ProductGallery
                   id={product.id}
                   productName={product.productName}

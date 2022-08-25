@@ -1,6 +1,6 @@
-import React, { Component } from "react";
-import { Link } from "react-router-dom";
-import styles from "./Navigation.module.scss";
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+import styles from './Navigation.module.scss';
 
 export class NavItem extends Component {
   changeCategory = () => {
@@ -8,7 +8,7 @@ export class NavItem extends Component {
   };
   render() {
     return (
-      <Link to={{ pathname: "/" }}>
+      <Link to={{ pathname: '/' }}>
         <li
           onClick={this.changeCategory}
           className={`${styles.nav__category} ${

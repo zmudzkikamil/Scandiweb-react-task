@@ -1,27 +1,24 @@
-import { Component } from "react";
-import styles from "./CartPage.module.scss";
-import { connect } from "react-redux";
-import Title from "./Components/Title";
-import ProductInfo from "./Components/ProductInfo";
-import QuantityChanger from "./Components/QuantityChanger";
-import ProductGallery from "./Components/ProductGallery";
-import OrderBtn from "./Components/OrderBtn";
-import OrderSummary from "./Components/OrderSummary";
+import { Component } from 'react';
+import styles from './CartPage.module.scss';
+import { connect } from 'react-redux';
+import Title from './Components/Title';
+import ProductInfo from './Components/ProductInfo';
+import QuantityChanger from './Components/QuantityChanger';
+import ProductGallery from './Components/ProductGallery';
+import OrderBtn from './Components/OrderBtn';
+import OrderSummary from './Components/OrderSummary';
 export class CartPage extends Component {
   render() {
     return (
-      <div className={styles["cart__container"]}>
+      <div className={styles['cart__container']}>
         <Title />
         <hr></hr>
         {this.props.cart.length > 0 ? (
           this.props.cart.map((product, index) => (
             <div key={index}>
-              <div className={styles["cart__product"]}>
+              <div className={styles['cart__product']}>
                 <ProductInfo product={product} />
-                <QuantityChanger
-                  product={product}
-                  quantity={product.quantity}
-                />
+                <QuantityChanger product={product} quantity={product.quantity} />
                 <ProductGallery
                   id={product.id}
                   productName={product.productName}
@@ -32,7 +29,7 @@ export class CartPage extends Component {
             </div>
           ))
         ) : (
-          <p className={styles["cart__empty"]}>Cart is empty!</p>
+          <p className={styles['cart__empty']}>Cart is empty!</p>
         )}
         <OrderSummary />
         <OrderBtn />
