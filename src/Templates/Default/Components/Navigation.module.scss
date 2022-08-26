@@ -29,7 +29,7 @@
     position: relative;
     padding: 16px;
     font-weight: 400;
-    font-family: 'Raleway';
+    font-family: $font-raleway;
     text-transform: uppercase;
     list-style: none;
     cursor: pointer;
@@ -61,7 +61,6 @@
       }
     }
   }
-
   &__btns-box {
     box-sizing: content-box;
     display: flex;
