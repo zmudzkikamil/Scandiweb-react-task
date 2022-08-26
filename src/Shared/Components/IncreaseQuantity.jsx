@@ -1,6 +1,6 @@
 import { Component } from 'react';
 import styles from './QuantityChanger.module.scss';
-import { addNewProduct } from '../../../ContextManager/CartSlice';
+import { addNewProduct } from '../../ContextManager/CartSlice';
 import { connect } from 'react-redux';
 export class IncreaseQuantity extends Component {
   addNewProductHandler = () => {

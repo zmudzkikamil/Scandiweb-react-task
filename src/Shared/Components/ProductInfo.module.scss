@@ -1,0 +1,40 @@
+.box {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-right: 10px;
+}
+.cart-page {
+  gap: 16px;
+}
+.cart-popover {
+  gap: 10px;
+}
+.box.cart-page {
+  & .price {
+    font-size: 24px;
+    line-height: 24px;
+    font-weight: 700;
+  }
+  & .title {
+    font-size: 30px;
+    font-weight: 400;
+  }
+  .brand {
+    font-size: 30px;
+    font-weight: 600;
+  }
+}
+.box.cart-popover {
+  & .price {
+    font-weight: 500;
+  }
+  .title {
+    font-size: 16px;
+    font-weight: 300;
+  }
+  .brand {
+    font-size: 16px;
+    font-weight: 300;
+  }
+}

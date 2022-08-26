@@ -1,0 +1,63 @@
+@import '../scss/variables';
+
+.atr-box {
+  display: flex;
+  flex-direction: column;
+}
+.atr-title {
+  margin-bottom: 8px;
+  color: $black;
+}
+.value-box {
+  display: flex;
+}
+.value {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px $black solid;
+  background-color: white;
+  font-family: $font-source-sans-pro;
+}
+.selected {
+  background-color: black;
+  color: white;
+}
+
+.atr-box.cart-page {
+  & .atr-title {
+    font-family: $font-roboto-condensed;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 18px;
+    line-height: 18px;
+  }
+  & .value-box {
+    gap: 12px;
+  }
+  & .value {
+    width: 63px;
+    height: 45px;
+    padding: 5px;
+    font-size: 16px;
+    line-height: 18px;
+  }
+}
+.atr-box.cart-popover {
+  & .atr-title {
+    font-family: $font-raleway;
+    font-weight: 400;
+    text-transform: capitalize;
+    font-size: 14px;
+    line-height: 16px;
+  }
+  & .value-box {
+    gap: 8px;
+  }
+  & .value {
+    min-width: 24px;
+    height: 24px;
+    padding: 0px 3px;
+    font-size: 14px;
+  }
+}

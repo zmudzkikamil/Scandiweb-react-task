@@ -1,0 +1,25 @@
+@mixin disabledBtn {
+  background-color: #5ece7c61;
+  cursor: default;
+  color: rgba(255, 255, 255, 0.8);
+}
+@mixin shadowImg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(128, 128, 128, 0.066);
+  z-index: 10;
+}
+@mixin productImg {
+  object-fit: cover;
+  object-position: center;
+  height: auto;
+}
+@mixin absoluteCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

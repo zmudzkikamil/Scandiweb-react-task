@@ -1,0 +1,76 @@
+@import '../scss/mixins';
+@import '../scss/variables';
+
+.changer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.cart-page {
+  height: 288px;
+}
+.cart-popover {
+  height: 190px;
+}
+.quantity {
+  font-weight: 500;
+}
+.btn {
+  position: relative;
+  background-color: #fff;
+  border: 1px solid $black;
+  border-radius: none;
+  cursor: pointer;
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+}
+.decrease {
+  @include absoluteCenter;
+  background-color: $black;
+  height: 0.5px;
+}
+.increase-horizontal {
+  @include absoluteCenter;
+  background-color: $black;
+  height: 0.5px;
+}
+.increase-vertical {
+  @include absoluteCenter;
+  background-color: $black;
+  width: 0.5px;
+}
+.changer.cart-page {
+  & .quantity {
+    font-size: 24px;
+  }
+  & .btn {
+    width: 45px;
+    height: 45px;
+  }
+  & .decrease {
+    width: 15px;
+  }
+  & .increase-horizontal {
+    width: 15px;
+  }
+  & .increase-vertical {
+    height: 15px;
+  }
+}
+.changer.cart-popover {
+  & .btn {
+    width: 24px;
+    height: 24px;
+  }
+  & .decrease {
+    width: 8px;
+  }
+  & .increase-horizontal {
+    width: 8px;
+  }
+  & .increase-vertical {
+    height: 8px;
+  }
+}

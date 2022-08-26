@@ -1,9 +1,9 @@
 import { Component } from 'react';
 import styles from './Container.module.scss';
 import { connect } from 'react-redux';
-import ProductInfo from './ProductInfo';
+import ProductInfo from '../../Components/ProductInfo';
 import ProductGallery from './ProductGallery';
-import QuantityChanger from './QuantityChanger';
+import QuantityChanger from '../../Components/QuantityChanger';
 import CartTitle from './CartTitle';
 import ButtonsContainer from './ButtonsContainer';
 import TotalPriceBox from './TotalPriceBox';
@@ -17,8 +17,12 @@ export class Container extends Component {
             <CartTitle totalQuantity={this.props.totalQuantity} />
             {this.props.cart.map((product, index) => (
               <div className={styles.product} key={index}>
-                <ProductInfo product={product} />
-                <QuantityChanger product={product} quantity={product.quantity} />
+                <ProductInfo className={'cart-popover'} product={product} />
+                <QuantityChanger
+                  className={'cart-popover'}
+                  product={product}
+                  quantity={product.quantity}
+                />
                 <ProductGallery
                   id={product.id}
                   productName={product.productName}

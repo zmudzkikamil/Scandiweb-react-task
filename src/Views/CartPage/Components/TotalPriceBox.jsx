@@ -1,7 +1,7 @@
 import { Component } from 'react';
 import { connect } from 'react-redux';
 import TotalPrice from '../../../Shared/Components/TotalPrice';
-export class PriceBox extends Component {
+export class TotalPriceBox extends Component {
   render() {
     return (
       <>
@@ -16,4 +16,4 @@ const mapStateToProps = (state) => {
 };
 const mapDispatchToProps = {};
 
-export default connect(mapStateToProps, mapDispatchToProps)(PriceBox);
+export default connect(mapStateToProps, mapDispatchToProps)(TotalPriceBox);

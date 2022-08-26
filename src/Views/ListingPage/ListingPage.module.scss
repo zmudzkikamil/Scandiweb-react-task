@@ -1,4 +1,5 @@
 @import '../../Shared/scss/variables.scss';
+@import '../../Shared/scss/mixins.scss';
 .title {
   font-weight: 400;
   font-size: 42px;
@@ -73,22 +74,14 @@
       }
     }
     &-shadow {
+      @include shadowImg;
       display: flex;
       justify-content: center;
       align-items: center;
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(128, 128, 128, 0.066);
-      z-index: 10;
     }
     &-img {
-      object-fit: cover;
-      object-position: center;
-      width: 75%;
-      height: auto;
+      @include productImg;
+      width: 80%;
     }
   }
 }

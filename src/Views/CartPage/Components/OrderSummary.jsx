@@ -1,7 +1,7 @@
 import { Component } from 'react';
 import { connect } from 'react-redux';
-import PriceBox from './PriceBox';
 import Tax from './Tax';
+import TotalPriceBox from './TotalPriceBox';
 import TotalQuantity from './TotalQuantity';
 
 export class OrderSummary extends Component {
@@ -24,7 +24,7 @@ export class OrderSummary extends Component {
           <tr>
             <td>Total:</td>
             <td>
-              <PriceBox />
+              <TotalPriceBox />
             </td>
           </tr>
         </tbody>

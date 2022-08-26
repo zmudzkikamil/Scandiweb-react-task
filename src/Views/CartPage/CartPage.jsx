@@ -2,8 +2,8 @@ import { Component } from 'react';
 import styles from './CartPage.module.scss';
 import { connect } from 'react-redux';
 import Title from './Components/Title';
-import ProductInfo from './Components/ProductInfo';
-import QuantityChanger from './Components/QuantityChanger';
+import ProductInfo from '../../Shared/Components/ProductInfo';
+import QuantityChanger from '../../Shared/Components/QuantityChanger';
 import ProductGallery from './Components/ProductGallery';
 import OrderBtn from './Components/OrderBtn';
 import OrderSummary from './Components/OrderSummary';
@@ -17,8 +17,12 @@ export class CartPage extends Component {
           this.props.cart.map((product, index) => (
             <div key={index}>
               <div className={styles['cart__product']}>
-                <ProductInfo product={product} />
-                <QuantityChanger product={product} quantity={product.quantity} />
+                <ProductInfo className={'cart-page'} product={product} />
+                <QuantityChanger
+                  className={'cart-page'}
+                  product={product}
+                  quantity={product.quantity}
+                />
                 <ProductGallery
                   id={product.id}
                   productName={product.productName}
