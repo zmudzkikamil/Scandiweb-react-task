@@ -1,3 +1,5 @@
+@import '../scss/variables';
+
 .overlay-container {
   position: relative;
   max-width: 1238px;
@@ -29,7 +31,7 @@
 .currency-option {
   height: 45px;
   padding-left: 20px;
-  font-family: 'Raleway', sans-serif;
+  font-family: $font-raleway;
   font-size: 18px;
   font-weight: 500;
   line-height: 29px;
