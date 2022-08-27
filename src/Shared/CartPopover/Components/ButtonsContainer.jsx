@@ -7,7 +7,7 @@ export class ButtonsContainer extends Component {
   render() {
     return (
       <div className={styles.container}>
-        <Link to='/cart' >
+        <Link to="/cart">
           <ViewBagBtn setPopover={this.props.setPopover} />
         </Link>
         <CheckoutBtn />

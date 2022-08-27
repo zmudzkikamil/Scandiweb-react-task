@@ -14,10 +14,7 @@ export class NavItemsBox extends Component {
             return (
               <>
                 {data.categories.map((category) => (
-                  <NavItem
-                    category={category.name}
-                    key={category.name}
-                  />
+                  <NavItem category={category.name} key={category.name} />
                 ))}
               </>
             );

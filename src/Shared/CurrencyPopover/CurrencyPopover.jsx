@@ -13,7 +13,8 @@ export class CurrencyPopover extends Component {
       <>
         <div
           className={`${styles['currency-overlay']} ${styles.overlay}`}
-          onClick={this.props.setModal}>
+          onClick={this.props.setModal}
+        >
           <div className={styles['overlay-container']}>
             <div onClick={(e) => e.stopPropagation()} className={styles['currency-popover']}>
               <Query query={CURRENCIES}>

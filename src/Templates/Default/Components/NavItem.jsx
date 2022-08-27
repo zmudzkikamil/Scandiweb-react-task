@@ -15,7 +15,8 @@ export class NavItem extends Component {
           onClick={this.changeCategory}
           className={`${styles.nav__category} ${
             this.props.currentCategory === this.props.category && styles.selected
-          }`}>
+          }`}
+        >
           {this.props.category}
         </li>
       </Link>
@@ -25,4 +26,4 @@ export class NavItem extends Component {
 const mapStateToProps = (state) => {
   return { currentCategory: state.category.category };
 };
-export default connect(mapStateToProps)(NavItem)
+export default connect(mapStateToProps)(NavItem);
