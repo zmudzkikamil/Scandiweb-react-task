@@ -101,17 +101,6 @@
   z-index: 150;
   color: $text-color;
 }
-.loading-box {
-  margin-top: 500px;
-}
-.error-box {
-  margin-bottom: auto;
-  margin-right: auto;
-}
-.error {
-  color: rgb(209, 148, 35);
-  font-size: 20px;
-}
 @media (min-width: 1393px) {
   .listing {
     justify-content: flex-start;

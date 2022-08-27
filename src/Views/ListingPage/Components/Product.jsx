@@ -8,34 +8,30 @@ import ProductPrice from './ProductPrice';
 
 export class Product extends Component {
   render() {
+    const { id, prices, gallery, attributes, inStock, brand } = this.props.product;
     return (
       <div className={styles['listing__container']}>
-        <Link
-          to={{
-            pathname: '/description-page',
-            state: { productId: this.props.id }
-          }}
-        >
-          <div className={`${styles.listing__item} ${!this.props.inStock && styles.disabled}`}>
+        <Link to={`/product/${id}`}>
+          <div className={`${styles.listing__item} ${!inStock && styles.disabled}`}>
             <ProductImg
-              id={this.props.id}
-              inStock={this.props.inStock}
-              gallery={this.props.gallery}
+              id={id}
+              inStock={inStock}
+              gallery={gallery}
               nameOfProduct={this.props.nameOfProduct}
             />
-            <ProductTitle brand={this.props.brand} nameOfProduct={this.props.nameOfProduct} />
-            <ProductPrice prices={this.props.prices} />
+            <ProductTitle brand={brand} nameOfProduct={this.props.nameOfProduct} />
+            <ProductPrice prices={prices} />
           </div>
         </Link>
-        {this.props.attributes.length === 0 && (
+        {attributes.length === 0 && (
           <CartButton
-            prices={this.props.prices}
-            gallery={this.props.gallery}
-            id={this.props.id}
+            prices={prices}
+            gallery={gallery}
+            id={id}
             nameOfProduct={this.props.nameOfProduct}
-            inStock={this.props.inStock}
-            brand={this.props.brand}
-            attributes={this.props.attributes}
+            inStock={inStock}
+            brand={brand}
+            attributes={attributes}
           />
         )}
       </div>
