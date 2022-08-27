@@ -14,3 +14,4 @@
   - Clickable logo, redirection to the all categories listing page.
   - Skeleton instead of spinners to improve UX (loading queries).
   - Toast messages after add product to a cart and after increase and decrease quantity.
+  - Implement tax in cart popover, not only in cart.
