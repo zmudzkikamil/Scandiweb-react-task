@@ -5,6 +5,7 @@ export const fetchProduct = (id) => {
 		query ProductById {
 			product(id: "${id}") {
 				name
+				id
 				inStock
 				gallery
 				description

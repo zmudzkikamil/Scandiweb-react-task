@@ -17,7 +17,9 @@ export class ProductGallery extends Component {
       <div className={styles['cart__gallery-box']}>
         <img
           src={this.state.thumbnail}
-          className={styles['cart__gallery-img']}
+          className={`${styles['cart__gallery-img']} ${
+            this.props.id === 'jacket-canada-goosee' && styles.jacket
+          }`}
           alt={this.props.productName}
         />
         <div className={styles['cart__gallery-shadow']}></div>

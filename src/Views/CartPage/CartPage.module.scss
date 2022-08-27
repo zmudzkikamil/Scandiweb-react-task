@@ -31,8 +31,7 @@
       @include shadowImg;
     }
     &-img {
-      @include productImg;
-      width: 90%;
+      width: 80%;
     }
     &-switch {
       position: absolute;
@@ -93,4 +92,7 @@ td:last-child {
   background-color: rgba(0, 0, 0, 0.73);
   border: none;
   cursor: pointer;
+}
+.jacket {
+  width: 100%;
 }

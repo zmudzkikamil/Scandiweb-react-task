@@ -80,7 +80,6 @@
       align-items: center;
     }
     &-img {
-      @include productImg;
       width: 80%;
     }
   }

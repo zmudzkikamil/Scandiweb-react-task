@@ -30,7 +30,11 @@ export class Gallery extends Component {
             ))}
           </ul>
         </div>
-        <MainImg state={this.state.mainImg} productName={this.props.productName} />
+        <MainImg
+          id={this.props.id}
+          state={this.state.mainImg}
+          productName={this.props.productName}
+        />
       </>
     );
   }

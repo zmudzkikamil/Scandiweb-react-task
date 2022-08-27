@@ -20,7 +20,7 @@ export class DescriptionPage extends Component {
             const { product } = data;
             return (
               <>
-                <Gallery gallery={product.gallery} productName={product.name} />
+                <Gallery id={product.id} gallery={product.gallery} productName={product.name} />
                 <DescriptionContainer productId={this.props.match.params.id} product={product} />
               </>
             );

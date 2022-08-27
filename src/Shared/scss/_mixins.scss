@@ -12,11 +12,6 @@
   background-color: rgba(128, 128, 128, 0.066);
   z-index: 10;
 }
-@mixin productImg {
-  object-fit: cover;
-  object-position: center;
-  height: auto;
-}
 @mixin absoluteCenter {
   position: absolute;
   top: 50%;
