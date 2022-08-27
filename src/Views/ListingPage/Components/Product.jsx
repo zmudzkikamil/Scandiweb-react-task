@@ -23,17 +23,15 @@ export class Product extends Component {
             <ProductPrice prices={prices} />
           </div>
         </Link>
-        {attributes.length === 0 && (
-          <CartButton
-            prices={prices}
-            gallery={gallery}
-            id={id}
-            nameOfProduct={this.props.nameOfProduct}
-            inStock={inStock}
-            brand={brand}
-            attributes={attributes}
-          />
-        )}
+        <CartButton
+          prices={prices}
+          gallery={gallery}
+          id={id}
+          nameOfProduct={this.props.nameOfProduct}
+          inStock={inStock}
+          brand={brand}
+          attributes={attributes}
+        />
       </div>
     );
   }

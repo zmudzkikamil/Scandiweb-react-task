@@ -19,6 +19,11 @@ export const fetchProducts = (category) => {
 				brand
 				attributes {
 					name
+					id
+					items{
+						value
+						id
+					}
 				}
 			}
 		}

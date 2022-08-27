@@ -3,6 +3,7 @@ import ListingCart from '../../../Shared/assets/svg/ListingCart';
 import styles from '../ListingPage.module.scss';
 import { connect } from 'react-redux';
 import { addNewProduct } from '../../../ContextManager/CartSlice';
+import { DefaultSelectedAttributes } from '../../../Shared/helpers/DefaultSelectedAttributes';
 export class CartButton extends Component {
   clickHandler = () => {
     this.props.dispatch(
@@ -14,7 +15,7 @@ export class CartButton extends Component {
         prices: this.props.prices,
         quantity: 1,
         allAttributes: this.props.attributes,
-        selectedAttributes: {}
+        selectedAttributes: DefaultSelectedAttributes(this.props.attributes)
       })
     );
   };

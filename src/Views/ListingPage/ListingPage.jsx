@@ -15,7 +15,7 @@ export class ListingPage extends Component {
   render() {
     return (
       <>
-        <Query query={fetchProducts(this.props.match.params.category)}>
+        <Query query={fetchProducts(this.props.match.params.category)} fetchPolicy="no-cache">
           {({ loading, error, data }) => {
             if (loading) return <LoadingBox className="listing-page" />;
             if (error) return <ErrorBox />;
