@@ -3,6 +3,8 @@
 # <p align="center">Kamil Żmudzki</p2>
 
 <p align="center"><em>Shop website - React.js, graphQL, Redux</em><br>
+
+IMPORTANT! Project was created on Class components instead of Functional components, due to react code exploration. Functional components are better, much cleaner and newer approach.
   
   **Details of web-app:**
   
