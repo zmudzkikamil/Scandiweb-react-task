@@ -1,4 +1,4 @@
-# <p align="center">eCommerce web-app</p1>
+# <p align="center">eCommerce web-app (2022)</p1>
 
 # <p align="center">Kamil Żmudzki</p2>
 
